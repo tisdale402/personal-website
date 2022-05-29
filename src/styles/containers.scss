@@ -1,0 +1,216 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+//App
+.app {
+  display: flex ;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//Header
+.header {
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  //align-content: center;
+  //position: absolute;
+  //top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+//*{
+//  margin:0;
+//  padding:0;
+//  font-family: 'Roboto', sans-serif;
+//  background:#1d1e22;
+//  color:#fff;
+//  z-index:0;
+//}
+
+.timeline{
+  width:800px;
+  //background-color:#072736;
+  color:#fff;
+  padding:30px 20px;
+  box-shadow:0px 0px 10px rgba(0,0,0,.5);
+}
+.timeline ul{
+  list-style-type:none;
+  border-left:2px solid #094a68;
+  padding:10px 5px;
+}
+.timeline ul li{
+  padding:20px 20px;
+  position:relative;
+  cursor:pointer;
+  transition:.5s;
+}
+.timeline ul li span{
+  display:inline-block;
+  background-color:#1685b8;
+  border-radius:25px;
+  padding:2px 5px;
+  font-size:15px;
+  text-align:center;
+}
+.timeline ul li .content h3{
+  color:#34ace0;
+  font-size:17px;
+  padding-top:5px;
+}
+.timeline ul li .content p{
+  padding:5px 0px 15px 0px;
+  font-size:15px;
+}
+.timeline ul li:before{
+  position:absolute;
+  content:'';
+  width:10px;
+  height:10px;
+  background-color:#34ace0;
+  border-radius:50%;
+  left:-11px;
+  top:28px;
+  transition:.5s;
+}
+.timeline ul li:hover{
+  //background-color:#071f2a;
+}
+.timeline ul li:hover:before{
+  background-color:#0F0;
+  box-shadow:0px 0px 10px 2px #0F0;
+}
+@media (max-width:300px){
+  .timeline{
+    width:100%;
+    padding:30px 5px 30px 10px;
+  }
+  .timeline ul li .content h3{
+    color:#34ace0;
+    font-size:15px;
+  }
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//Nav-Bar
+.nav-bar {
+  list-style-type: none;
+  position: fixed;
+  z-index: 100;
+}
+
+.nav-bar:hover {
+  color: white;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//Overview
+.skills-section {
+  margin-top: 35vh;
+  max-width: 100vw;
+
+  display: flex;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//About Me
+.about-me {
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 600;
+  //text-align: center;
+  margin-top: 25rem;
+  border-radius: 500px;
+  //border: #F60C5B solid 1px;
+  //background-color: #F60C5B;
+  //text-shadow:
+  //        0 0 7px #fff,
+  //        0 0 10px #fff,
+  //        0 0 21px #fff;
+  //height: 25rem;
+  margin-bottom: 18rem;
+
+  display: flex;
+  //justify-content: space-evenly;
+
+  animation: fadeIn 2s ease-out;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//Quote
+
+.quote {
+  font-size: 1.6rem;
+  background: rgba(255, 255, 255, .065);
+  border-radius: 15px;
+  max-height: 10rem;
+  max-width: 10rem;
+  text-align: start;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, .5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  animation: moveInLeft 2s ease-out;
+}
+
+.projects {
+  color: white;
+  text-align: center;
+  min-height: 50rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-section {
+  background-color: white;
+  min-width: 80rem;
+}
+
+.footer {
+  //display: flex;
+  //justify-content: space-between;
+  position: relative;
+  color: var(--old-lavender);
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  /*Causes the go too far part of animation*/
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes lowerOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .7;
+  }
+}
+
+@keyframes typing {
+  from {width: 0}
+  to {width: 100%}
+}
+
+@keyframes blink-caret {
+  from, to {border-color: transparent}
+  50% { border-color: orange}
+}

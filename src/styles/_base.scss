@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --violet-blue: #6E70CC;
+  --old-lavender: #80806B;
+  --violets-are-blue: rgb(255, 255, 255);
+  --pale-lavender: #D6D7FF;
+  --purple-navy: #6B6B80;
+  --green: #14eebb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  //background-color: var(--black);
+  background: #000;
+  //background: linear-gradient(275deg, rgba(209,0,255,1) -10%, rgba(0,0,0,1) 40%, rgba(17,0,255,1) 215%);
+  background-size: cover;
+  box-sizing: border-box;
+  //background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+}
+
+.skills-background {
+  background: linear-gradient(132deg, rgba(252, 159, 65, 0.5), rgba(197, 52, 27, 0.5), rgba(53, 33, 35, 0.5));
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite,
+  fadeIn .7s linear;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  //overflow: hidden;
+  padding:0;
+  margin:0px;
+}
+
+.main-name-background {
+  background: rgba(109, 53, 252, 0.41);
+  background-size: 400% 400%;
+  animation: fadeIn .8s ease-out;
+  position: relative;
+  //height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding:0;
+  margin:0px;
+}
+
+.about-me-background {
+  background: black;
+  background-size: cover;
+  //animation: fadeIn .7s linear, Gradient 15s ease infinite;
+
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding:0;
+  margin:0px;
+}
+.container-fluid{
+  //height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  //background: #000;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
