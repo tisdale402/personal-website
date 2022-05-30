@@ -38,12 +38,14 @@ const SkillsRow = ({title, cardArgs, direction, titleColor, imagePath}: skillArg
     });
 
     return (
-        <div onMouseOver={() => {setIsActive(true)}} onMouseLeave={() => setIsActive(false)} style={{display: 'flex', flexDirection: "column", alignItems: 'center', minWidth: '50vw', minHeight: '20vh', marginBottom: "4rem"}}>
+        <div style={{display: 'flex', flexDirection: "column", alignItems: 'center', minWidth: '50vw', minHeight: '20vh', marginBottom: "4rem"}}>
             <StyledRowTitleComponent>
-                {title}
-                <img src={imagePath} alt="test" style={{marginLeft: '1.25rem', maxWidth: '5rem', maxHeight: '5rem'}}/>
+                <div style={{textAlign: 'center', width: '100%', height: '100%'}}>
+                    {title}
+                </div>
+                <img src={imagePath} alt="test" style={{marginLeft: '1.25rem', maxWidth: '4rem', maxHeight: ' 3.5rem'}}/>
                 {/*<img src={'../../src/img/103414.png'} alt="test" className='skills-card-image'/>*/}
-            </StyledRowTitleComponent>x
+            </StyledRowTitleComponent>
             <div className='skills-row' style={{display: 'flex', flexDirection: "row", alignItems: 'flex-start', fontSize: '5rem',
             textShadow:
                 '0 0 7px #fff, 0 0 10px #fff',

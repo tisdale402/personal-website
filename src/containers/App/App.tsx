@@ -35,6 +35,8 @@ import {
 } from 'react-scroll-section';
 //@ts-ignore
 import {StaticMenu} from "../menu/Menu.tsx";
+//@ts-ignore
+import ProjectSection from "../ProjectsSection/ProjectSection.tsx";
 
 
 const App = () => {
@@ -58,6 +60,7 @@ const App = () => {
                     <MainName/>
                     <AboutSection/>
                     <SkillsSection/>
+                    <ProjectSection/>
                     <Footer/>
                 </ScrollingProvider>
             </StyledBackground>

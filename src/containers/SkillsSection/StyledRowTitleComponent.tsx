@@ -14,20 +14,19 @@ const StyledTitle = styled.div`
   align-items: center;
   font-size: 3.8rem;
   // font-family: black;
-  color: black;
-  background: linear-gradient(90deg, rgba(6, 214, 160, 1), #009FFD);
+  color: rgba(255, 255, 255, .065);
+  -webkit-text-stroke: 2px rgba(6, 214, 160, 1);
+  background: black;
   padding: 0 20px;
-  max-height: 5rem;
-  min-width: 35%;
   border-radius: 2.5rem;
   // text-shadow:
   //         0 0 7px white;
-          box-shadow: 0 0 .2rem blue,
+          box-shadow: 0 0 .2rem rgba(6, 214, 160, 1),
             0 0 .2rem #fff,
-            0 0 2rem blue,
-            // 0 0 0.8rem blue,
-            // 0 0 2.8rem blue,
-            inset 0 0 1.3rem blue; 
+            0 0 2rem rgba(6, 214, 160, 1),
+            // 0 0 0.8rem rgba(6, 214, 160, 1),
+            // 0 0 2.8rem rgba(6, 214, 160, 1),
+            inset 0 0 1.3rem rgba(6, 214, 160, 1); 
   animation: ${''} 2s ease-out;}`;
 
 const StyledRowTitleComponent = () => (

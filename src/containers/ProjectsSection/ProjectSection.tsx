@@ -3,7 +3,13 @@ import React from 'react';
 import '../../styles/style.scss';
 
 const ProjectSection = () => (
-    <div style={{display: 'flex', flexDirection: 'column'}}></div>
+    <section>
+        <h1>
+            <span className="glitch" data-text="Projects•">
+              Projects
+            </span>
+        </h1>
+    </section>
 );
 
 export default ProjectSection;

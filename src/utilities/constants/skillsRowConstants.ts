@@ -28,7 +28,8 @@ import mongoDBIMG from "../../img/clipart2754492.png";
 import firebaseIMG from "../../img/kisspng-firebase-computer-icons-mobile-backend-as-a-servic-ambil-5b8b1667404fe8.5499898515358418952634.png";
 //@ts-ignore
 import pythonIMG from "../../img/kisspng-python-general-purpose-programming-language-comput-python-programming-language-symphony-solution-5b6ee0c89ecd95.2067324515339931606505.png";
-
+//@ts-ignore
+import jenkinsImg from "../../img/PngItem_3408094.png";
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Skills Rows Titles
 export const UI_ROW_TITLE = 'UI/UX';
@@ -70,9 +71,9 @@ export const SPRING_TOOLTIP_TEXT = 'The Spring Framework is an application frame
     'Java platform. The framework\'s core features can be used by any Java application, but there are extensions ' +
     'for building web applications on top of the Java EE platform.';
 
-export const AXIOS_TOOLTIP_TEXT = 'Axios is a Javascript library used to make HTTP requests from node. js or XMLHttpRequests ' +
-    'from the browser and it supports the Promise API that is native to JS ES6. It can be used intercept HTTP ' +
-    'requests and responses and enables client-side protection against XSRF.';
+export const PYTHON_TOOLTIP_TEXT = 'Python is a high-level, interpreted, general-purpose programming language. Its design' +
+    ' philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and' +
+    ' garbage-collected.';
 
 export const IAAS_TOOLTIP_TEXT = 'Infrastructure as a service (IaaS) is a type of cloud computing service that offers' +
     ' essential compute, storage, and networking resources on demand, on a pay-as-you-go basis. IaaS is one of the four' +
@@ -96,6 +97,10 @@ export const MONGODB_TOOLTIP_TEXT = 'Version control (also known as revision con
     ' a class of systems responsible for managing changes to computer programs, documents, large web sites, or other' +
     ' collections of information.';
 
+export const JENKINS_TOOLTIP_TEXT = 'Jenkins is an open source automation server. It helps automate the parts of' +
+    ' software development related to building, testing, and deploying, facilitating continuous integration and' +
+    ' continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat.';
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Card Arguments
@@ -116,7 +121,7 @@ const REACT_CARD_ARGS: ICardArg = {
 const ADOBE_XD_CARD_ARGS: ICardArg = {
     title: "AdobeXD",
     image: xdIMG,
-    color: "gba(203,60,158,1)",
+    color: "rgba(203,60,158,1)",
     tooltipColor: 'rgba(203,60,158,1)',
     tooltipText: ADOBE_XD_TOOLTIP_TEXT
 }
@@ -154,7 +159,7 @@ const AXIOS_CARD_ARGS: ICardArg = {
     image: pythonIMG,
     color: "#fff",
     tooltipColor: 'rgba(43,0,250,.5)',
-    tooltipText: AXIOS_TOOLTIP_TEXT
+    tooltipText: PYTHON_TOOLTIP_TEXT
 }
 
 const IAAS_CARD_ARGS: ICardArg = {
@@ -202,7 +207,7 @@ const GIT_CARD_ARGS: ICardArg = {
     image: gitIMG,
     color: "#fff",
     tooltipColor: 'rgba(61,173,203,0.5)',
-    tooltipText: AXIOS_TOOLTIP_TEXT
+    tooltipText: PYTHON_TOOLTIP_TEXT
 }
 
 const JIRA_CARD_ARGS: ICardArg = {
@@ -211,6 +216,14 @@ const JIRA_CARD_ARGS: ICardArg = {
     color: "#fff",
     tooltipColor: 'rgba(255,119,34,0.5)',
     tooltipText: JIRA_TOOLTIP_TEXT
+}
+
+const JENKINS_CARD_ARGS: ICardArg = {
+    title: "Jenkins",
+    image: jenkinsImg,
+    color: "#fff",
+    tooltipColor: 'rgba(255,119,34,0.5)',
+    tooltipText: JENKINS_TOOLTIP_TEXT
 }
 
 
@@ -243,7 +256,8 @@ export const DBMS_CARDS: ICardArg[] = [
 
 export const PROJECT_MANAGEMENT_CARD_ARGS: ICardArg[] = [
     GIT_CARD_ARGS,
-    JIRA_CARD_ARGS
+    JIRA_CARD_ARGS,
+    JENKINS_CARD_ARGS
 ];
 
 

@@ -28,8 +28,8 @@ const Quote = ({width, quote, steps, time}: IQuote) => {
                              border-right: .15em solid white;
                              white-space: nowrap;
                              color: #009FFD;
-                             overflow: hidden,
-                              fontSize: 16px, 
+                             // overflow: hidden,
+                              font-size: 3.5rem; 
                               // margin: 0 10rem,
                                display: block
                              max-width: 5vw;

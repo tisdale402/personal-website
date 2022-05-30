@@ -8,8 +8,11 @@ import styled, {keyframes} from "styled-components";
 //@ts-ignore
 import Quote from "../../components/quote/quote.tsx";
 //@ts-ignore
-import testImage from "../../img/hotel-2.jpg"
+import testImage from "../../img/data-mining.png"
+//@ts-ignore
+import testImage2 from "../../img/AdobeStock_173668395.jpeg"
 import {Section} from 'react-scroll-section';
+import ImageFollow from "react-image-follow";
 
 import PulseLine from "../../utilities/pulseLine/pulseLine";
 
@@ -58,65 +61,86 @@ const AboutSection = () => {
     //         console.log('useEffect')
     //     }
     // }, [activeYear])
-    const src =
-        "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
-    const src2 = "./big_buck_bunny_720p_surround.mp4.crdownload"
-
     return (
         <Section id={'about'}>
-        <section>
+        <section style={{margin: '5vh 5vw 0 5vw',}}>
+            <h1>
+                <span className="glitch" data-text="Experience">
+                  Experience
+                </span>
+            </h1>
+            {/*<div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>*/}
             <div className="timeline">
                 <ul>
                     <li>
-                        <span>December 2020</span>
-                        <div className="content" style={{display: 'flex'}}>
-                            <div>
-                            <h3>Louisiana State University</h3>
-                            <h2>Baton Rouge, Louisiana</h2>
+                        <span>June 2022</span>
+                        <div className="content" style={{display: "flex", flexDirection: "row"}}>
+                            <div style={{display: 'flex', flexDirection: 'column'}}>
+                            <h3>BlackLocus</h3>
+                            <h2>Austin, Texas</h2>
                             <p>
-                                Received Bachelor of Science recognition, majoring in Computer Science concentrated
-                                <br/> in Software Engineering. LSU's backend centric program required
+                                BlackLocus is a startup that was acquired by The Home Depot to serve as the data mining <br/>
+                                division of the company. They use procured and processed information to make optimal decisions <br/>
+                                in merchandise pricing internationally. Through a contract facilitated by KForce, I <br/>
+                                served in a Fullstack Developer role for this company, contributing to the data<br/>
+                                validation portion of the tech stack.
                             </p>
                             </div>
-                            <img src={testImage} alt="test" style={{maxWidth: '15rem', maxHeight: '15rem'}}/>
+                            <div style={{backgroundColor: 'black'}} >
+                                <ImageFollow src={testImage} alt="test"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>March 2021</span>
+                        <div className="content" style={{display: "flex", flexDirection: "row"}}>
+                            <div style={{display: 'flex', flexDirection: 'column'}}>
+
+                            <h3>Maxar Technologies</h3>
+                            <h2>Denver, Colorado</h2>
+                            <p>
+                                Maxar is a space technology company founded in the 1960's. In my position as a <br/>
+                                technical consultant for Perficient, I served many roles for Maxar in a client-based relationship, including <br/>
+                                frontend, backend, and fullstack developer roles. In all of these roles, I provided contributions <br/>
+                                to their space image and infrastructure acquisition technologies
+                            </p>
+                        </div>
+                            <div style={{backgroundColor: 'black'}} >
+                                <ImageFollow src={testImage2} alt="test"/>
+                            </div>
                         </div>
                     </li>
                     <li>
                         <span>February 2021</span>
                         <div className="content">
-                            <h3>Perficient: Technical Consultant</h3>
+                            <h3>Perficient</h3>
                             <h2>Lafayette, Louisiana</h2>
                             <p>
-                                Perficient is a ditigal consulting company that servers fortune 500 companies<br/>
-                                With clients spanning Asia, the Americas, and Europe, Perficient's global reach is one to be<br/>
-                                recognized.
+                                Perficient is a digital consulting company that serves internationally acclaimed clients<br/>
+                                In addition to my client work, I contributed to internal projects for Perficient's use<br/>
+                                I earned the Scrum Fundamentals certification and the Amazon Web Services Cloud Practitioner <br/>
+                                certifications during my tenure.
                             </p>
                         </div>
                     </li>
                     <li>
-                        <span>March 2021</span>
+                        <span>December 2020</span>
                         <div className="content">
-                            <h3>Maxar Technologies</h3>
-                            <h2>Denver, Colorado</h2>
-                            <p>
-                                Maxar is a space technology company started in the 1960's. My contributions included <br/>
-                                frontend and backend code bases, in a microservice, cloud-based infrastructure.
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <span>May 2022</span>
-                        <div className="content">
-                            <h3>BlackLocus: Fullstack Developer</h3>
-                            <h2>Austin, Texas</h2>
-                            <p>
-                                BlackLocus is the data mining division of The Home Depot. My contributions were to the data<br/>
-                                validation portion of the application stack
-                            </p>
+                            <div>
+                                <h3>Louisiana State University</h3>
+                                <h2>Baton Rouge, Louisiana</h2>
+                                <p>
+                                    Received Bachelor of Science recognition, majoring in Computer Science concentrated <br/>
+                                    in Software Engineering. LSU's computer science program focused on backend application <br/>
+                                    principles and patterns. Shortly after graduation, I attained the Java SE 8 programmer from<br/>
+                                    Oracle
+                                </p>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
+            {/*</div>*/}
         </section>
         </Section>
 );
