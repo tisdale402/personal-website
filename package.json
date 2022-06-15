@@ -14,6 +14,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-image-follow": "^1.2.2",
+    "react-responsive": "^9.0.0-beta.10",
     "react-scripts": "^5.0.1",
     "react-scroll-section": "^3.1.0",
     "react-tooltip": "^4.2.21",

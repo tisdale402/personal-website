@@ -7,48 +7,20 @@ import Tooltip, {TooltipClasses} from "@mui/material/Tooltip";
 // import Tooltip from "@material-ui/core/Tooltip";
 
 interface ISkillsCard {
-    title: string;
+    info: string;
     color: string;
     image: any;
     tooltipColor: string;
     tooltipText: string;
     isRowActive: boolean;
-
+    setCard: (string) => void;
 }
-
-// // @ts-ignore
-// const theme = createTheme({
-//     palette: {
-//         primary: {
-//             light: "black",
-//             main: "black",
-//             dark: "black",
-//             contrastText: "black",
-//         },
-//         // backgroundColor: "transparent"
-//     }
-// });
-
-const theme = createTheme({
-    palette: {
-        background: {
-            paper: '#fff',
-        },
-        text: {
-            primary: '#173A5E',
-            secondary: '#46505A',
-        },
-        action: {
-            active: '#001E3C',
-        },
-    },
-});
 
 // @ts-ignore
 interface ITooltip {
     title: string;
     className?: any;
-    cardImage: string;
+    cardImage: any;
 }
 const BlueOnGreenTooltip = styled(({ title, className, cardImage}: ITooltip) => (
     <div style={{marginBottom: '.8rem', fontSize: '2rem'}}>
@@ -63,15 +35,12 @@ const BlueOnGreenTooltip = styled(({ title, className, cardImage}: ITooltip) => 
 `);
 
 
-const SkillsCard = ({title, image, color, tooltipColor, tooltipText, isRowActive}: ISkillsCard) => {
+const SkillsCard = ({info, image, color, tooltipColor, tooltipText, isRowActive, setCard}: ISkillsCard) => {
 
 
     return (
         <div className='skills-card'>
-            <div className='skills-shadow' onClick={()=> {console.log(title);}}>
-                <div style={{fontSize: '1.6rem', marginBottom: '1rem'}}>
-                    {title}
-                </div>
+            <div className='skills-shadow' onClick={()=> {setCard(info);}}>
                 <BlueOnGreenTooltip title={tooltipText} cardImage={image}/>
             </div>
     </div>

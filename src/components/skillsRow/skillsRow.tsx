@@ -18,8 +18,9 @@ interface skillArgs {
     direction: string;
     titleColor: string;
     imagePath: string;
+    setCard: (string) => void;
 }
-const SkillsRow = ({title, cardArgs, direction, titleColor, imagePath}: skillArgs) => {
+const SkillsRow = ({title, cardArgs, direction, titleColor, setCard, imagePath}: skillArgs) => {
     const [isActive, setIsActive] = useState(false);
 
     const fontFamilies = ['Droid Sans', 'Chilanka', 'Festive', 'Syne Tactile',
@@ -54,7 +55,7 @@ const SkillsRow = ({title, cardArgs, direction, titleColor, imagePath}: skillArg
 
                 return (
                     // @ts-ignore
-                        <SkillsCard isRowActive={isActive} key={card.title} title={card.title} color={card.color} tooltipText={card.tooltipText} tooltipColor={card.tooltipColor} image={card.image}/>
+                        <SkillsCard isRowActive={isActive} setCard={setCard} key={card.title} info={card.info} color={card.color} tooltipText={card.tooltipText} tooltipColor={card.tooltipColor} image={card.image}/>
                 )
             })}
             </div>

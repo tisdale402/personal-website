@@ -50,6 +50,17 @@ $bg-color: #4242e6;
   }
 }
 
+@media (max-width:100px){
+  .main-name{
+    width:100%;
+    padding:30px 5px 30px 10px;
+  }
+  //.timeline ul li .content h3{
+  //  color:#34ace0;
+  //  font-size:15px;
+  //}
+
+}
 .conic {
   position: relative;
   width: 300px;
@@ -368,6 +379,23 @@ make it thinner, then set it to again wrap around the entire parent element.
   display: flex;
   height: 80%;
   //overflow: hidden;
+}
+
+//.about-image {
+//    animation: img .75s ease-out;
+//}
+
+.about-image {
+  opacity: 0.6;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+}
+.about-image:hover {
+  opacity: 1.0;
+  transition: opacity .55s ease-in-out;
+  -moz-transition: opacity .55s ease-in-out;
+  -webkit-transition: opacity .55s ease-in-out;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

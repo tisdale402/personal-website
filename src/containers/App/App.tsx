@@ -28,6 +28,9 @@ import AboutSection from "../AboutSection/AboutSection.tsx";
 import MainName from "../MainName/MainName.tsx";
 // @ts-ignore
 import Footer from "../Footer/Footer.tsx";
+//@ts-ignore
+import MediaQuery from "react-responsive";
+
 
 import {
     ScrollingProvider,
@@ -46,15 +49,16 @@ const App = () => {
     background-size: 400% 400%;
     animation: fadeIn .8s ease-out;
     position: relative;
-    //height: 100vh;
+    // height: 100%;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     padding:0;
     margin:0px;
     animation: ${''} 2s infinite;}`;
 
     return (
             <StyledBackground>
+                <MediaQuery minWidth={1224}>
                 <ScrollingProvider>
                     <StaticMenu/>
                     <MainName/>
@@ -63,6 +67,7 @@ const App = () => {
                     <ProjectSection/>
                     <Footer/>
                 </ScrollingProvider>
+                </MediaQuery>
             </StyledBackground>
     );
 };

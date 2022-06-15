@@ -17,6 +17,10 @@ const NavButtonStyling = styled.li`
     border-radius: 3px;
     margin-left: 5px;
     margin-right: 5px;
+    
+    &:hover {
+    cursor: pointer;
+    }
     `;
 
 const NavButtonStyledComponent = ({title, onClick, selected}: INavButton) => (

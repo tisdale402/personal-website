@@ -39,6 +39,16 @@ body {
   min-height: 100vh;
 }
 
+.anchor {
+  color: rgba(6, 214, 160, 1);
+}
+.anchor:link {
+  color: rgba(6, 214, 160, 1);
+}
+
+.anchor:visited {
+  color: rgba(6, 214, 160, 1);
+}
 .skills-background {
   background: linear-gradient(132deg, rgba(252, 159, 65, 0.5), rgba(197, 52, 27, 0.5), rgba(53, 33, 35, 0.5));
   background-size: 400% 400%;
@@ -95,3 +105,9 @@ body {
     background-position: 0% 50%;
   }
 }
+
+//@media only screen and (max-width: 1000px) {
+//  body {
+//    background-color: lightblue;
+//  }
+//}
