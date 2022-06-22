@@ -49,7 +49,7 @@ const App = () => {
     background-size: 400% 400%;
     animation: fadeIn .8s ease-out;
     position: relative;
-    // height: 100%;
+    height: 100vh;
     width: 100%;
     // overflow: hidden;
     padding:0;
@@ -58,7 +58,7 @@ const App = () => {
 
     return (
             <StyledBackground>
-                <MediaQuery minWidth={1224}>
+                {/*<MediaQuery minWidth={1024}>*/}
                 <ScrollingProvider>
                     <StaticMenu/>
                     <MainName/>
@@ -67,7 +67,12 @@ const App = () => {
                     <ProjectSection/>
                     <Footer/>
                 </ScrollingProvider>
-                </MediaQuery>
+                {/*</MediaQuery>*/}
+                {/*<MediaQuery maxWidth={1023} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>*/}
+                {/*    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center',color: 'red'}}>*/}
+                {/*    BLOCKED FOR MOBILE DEVICES*/}
+                {/*    </div>*/}
+                {/*</MediaQuery>*/}
             </StyledBackground>
     );
 };

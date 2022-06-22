@@ -51,7 +51,8 @@ const SkillsSection = () => {
                             <SkillsRow titleColor={'brown'} title={SkillRowConstants.DBMS_ROW_TITLE}
                                        cardArgs={SkillRowConstants.DBMS_CARDS}
                                        direction={'l'}
-                                       imagePath={databaseImg}/>
+                                       imagePath={databaseImg}
+                                       setCard={setCurrentCard}/>
                             <SkillsRow titleColor={'blue'} title={SkillRowConstants.PROJECT_MANAGEMENT_ROW_TITLE}
                                        cardArgs={SkillRowConstants.PROJECT_MANAGEMENT_CARD_ARGS}
                                        direction={'l'}
@@ -59,7 +60,13 @@ const SkillsSection = () => {
                                        setCard={setCurrentCard}/>
                         </div>
                     <div>
-                        <div className='about-panel' style={{display: 'flex', alignSelf: 'flex-start', height: '30%', borderRadius: '25px', position: 'sticky', top: '0'}}>
+                        {/*<div className="card">*/}
+                        {/*    Magic Card*/}
+                        {/*</div>*/}
+                        <div className='about-panel' style={{display: 'flex', height: '17%', width: '30vw', flexDirection: 'column', justifyContent: 'space-evenly', borderRadius: '10px', position: 'sticky', top: '5rem'}}>
+                            <div style={{display: 'flex', justifyContent: 'center'}}>
+                                <img src={databaseImg} alt="test" className='skills-card-image'/>
+                            </div>
                             {currentCard}
                         </div>
                     </div>

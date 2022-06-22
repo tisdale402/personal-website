@@ -29,6 +29,7 @@ import MN_Image6 from '../../img/Attachment-6.png';
 //@ts-ignore
 import MN_Image7 from '../../img/Attachment-7.png';
 import {Section} from 'react-scroll-section';
+import MediaQuery from 'react-responsive';
 
 
 interface IMainName {
@@ -88,46 +89,84 @@ const MainName = ()=> {
 
     return (
         <Section id={'home'}>
-        <div className='main-name'>
-            <div className='cube'/>
-            <div className='cube'/>
-            <div className='cube'/>
-            <div className='cube'/>
-            <div className='cube'/>
-            <div className='cube'/>
-            <div style={{fontSize: '6.5rem', display: 'flex', flexDirection: 'column', marginTop: '25vh', marginRight: '6vw', justifyContent: 'space-between'}}>
-                <div style={{display: 'flex', alignItems: 'center', color: '#009FFD'}}>
-                    {/*Alex*/}
-                    <MainNameLetter fontFamily={fontFamily} letter={'A'} delay={'1.6'}/>
-                    <MainNameLetter fontFamily={fontFamily} letter={'L'} delay={'1.45'}/>
-                    <MainNameLetter fontFamily={fontFamily} letter={'E'} delay={'1.3'}/>
-                    <MainNameLetter fontFamily={fontFamily} letter={'X'} delay={'1.15'}/>
-                    {/*<ReactImageComponent/>*/}
+            {/*<MediaQuery minWidth={1024}>*/}
+            <MediaQuery minWidth={1024}>
+                <div className='main-name'>
+                <div className='cube'/>
+                <div className='cube'/>
+                <div className='cube'/>
+                <div className='cube'/>
+                <div className='cube'/>
+                <div className='cube'/>
+                <div style={{fontSize: '6.5rem', display: 'flex', flexDirection: 'column', marginTop: '25vh', marginRight: '6vw', justifyContent: 'space-between'}}>
+                    <div style={{display: 'flex', alignItems: 'center', color: '#009FFD'}}>
+                        {/*Alex*/}
+                        <MainNameLetter fontFamily={fontFamily} letter={'A'} delay={'1.6'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'L'} delay={'1.45'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'E'} delay={'1.3'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'X'} delay={'1.15'}/>
+                        {/*<ReactImageComponent/>*/}
+                    </div>
+                    <div style={{display: 'flex', color: '#009FFD'}}>
+                        {/*Tisdale*/}
+                        <MainNameLetter fontFamily={fontFamily} letter={'T'} delay={'1.0'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'I'} delay={'0.85'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'S'} delay={'0.6'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'D'} delay={'0.45'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'A'} delay={'0.3'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'L'} delay={'0.15'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'E'} delay={'0.0'}/>
+                    </div>
+                    <div style={{minWidth: '100%', height: '5px', backgroundColor: '#06D6A0'}}/>
+                    <span className="glitch" data-text="software_consultant_">
+                        software_consultant
+                    </span>
+                    </div>
+                <div style={{ marginLeft: '10vw', height: '50%', display: 'flex'}}>
+                    {/*<img src={IMAGES_PATHS[randomNumber][Math.floor(Math.random()*IMAGES_PATHS[randomNumber].length)]} alt="test"/>*/}
+                        <img src={IMAGES_PATHS[0][0]} alt="test"/>
                 </div>
-                <div style={{display: 'flex', color: '#009FFD'}}>
-                    {/*Tisdale*/}
-                    <MainNameLetter fontFamily={fontFamily} letter={'T'} delay={'1.0'}/>
-                    <MainNameLetter fontFamily={fontFamily} letter={'I'} delay={'0.85'}/>
-                    <MainNameLetter fontFamily={fontFamily} letter={'S'} delay={'0.6'}/>
-                    <MainNameLetter fontFamily={fontFamily} letter={'D'} delay={'0.45'}/>
-                    <MainNameLetter fontFamily={fontFamily} letter={'A'} delay={'0.3'}/>
-                    <MainNameLetter fontFamily={fontFamily} letter={'L'} delay={'0.15'}/>
-                    <MainNameLetter fontFamily={fontFamily} letter={'E'} delay={'0.0'}/>
-                </div>
-                <div style={{minWidth: '100%', height: '5px', backgroundColor: '#06D6A0'}}/>
-                <span className="glitch" data-text="software_consultant_">
-                    software_consultant
-                </span>
-                    {/*<div style={{display: "flex", justifyContent: 'flex-end'}}>*/}
-                    {/*{title}*/}
-                    {/*</div>*/}
-                    {/*<Quote width={eachQuote.width} time={eachQuote.time} steps={eachQuote.steps} quote={eachQuote.quote}/>*/}
-                </div>
-            <div style={{ marginLeft: '10vw', height: '50%', display: 'flex'}}>
-                {/*<img src={IMAGES_PATHS[randomNumber][Math.floor(Math.random()*IMAGES_PATHS[randomNumber].length)]} alt="test"/>*/}
-                <img src={IMAGES_PATHS[0][0]} alt="test"/>
             </div>
-        </div>
+            </MediaQuery>
+            <MediaQuery maxWidth={1023}>
+                <div style={{marginLeft: '50vw'}}>
+                <div style={{fontSize: '6.5rem', display: 'flex', flexDirection: 'column', marginRight: '6vw', justifyContent: 'space-between'}}>
+                    <div style={{display: 'flex', alignItems: 'center', color: '#009FFD'}}>
+                        {/*Alex*/}
+                        <MainNameLetter fontFamily={fontFamily} letter={'A'} delay={'1.6'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'L'} delay={'1.45'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'E'} delay={'1.3'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'X'} delay={'1.15'}/>
+                        {/*<ReactImageComponent/>*/}
+                    </div>
+                    <div style={{display: 'flex', color: '#009FFD'}}>
+                        {/*Tisdale*/}
+                        <MainNameLetter fontFamily={fontFamily} letter={'T'} delay={'1.0'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'I'} delay={'0.85'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'S'} delay={'0.6'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'D'} delay={'0.45'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'A'} delay={'0.3'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'L'} delay={'0.15'}/>
+                        <MainNameLetter fontFamily={fontFamily} letter={'E'} delay={'0.0'}/>
+                    </div>
+                    <div style={{minWidth: '100%', height: '5px', backgroundColor: '#06D6A0'}}/>
+                    <span className="glitch" data-text="software_consultant_">
+                        software_consultant
+                    </span>
+                    </div>
+                {/*<div style={{ marginLeft: '10vw', height: '50%', display: 'flex'}}>*/}
+                {/*    /!*<img src={IMAGES_PATHS[randomNumber][Math.floor(Math.random()*IMAGES_PATHS[randomNumber].length)]} alt="test"/>*!/*/}
+                {/*        <img src={IMAGES_PATHS[0][0]} alt="test"/>*/}
+                {/*</div>*/}
+            </div>
+            </MediaQuery>
+
+            {/*</MediaQuery>*/}
+            {/*<MediaQuery maxWidth={1023}>*/}
+            {/*    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center',color: 'red'}}>*/}
+            {/*        BLOCKED FOR MOBILE DEVICES*/}
+            {/*    </div>*/}
+            {/*</MediaQuery>*/}
         </Section>
     )
 }

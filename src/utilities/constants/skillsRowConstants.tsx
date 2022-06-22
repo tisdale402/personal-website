@@ -51,17 +51,23 @@ export const SKILLS_ROWS_TITLES: string[] = [
 
 export const PLACEHOLDER_INFO = 'Click an icon to learn more...';
 
-export const REACT_INFO = 'React is a free and open-source front-end JavaScript library for building user ' +
-    'interfaces based on UI components. It is maintained by Meta and a community of individual developers and ' +
-    'companies. React can be used as a base in the development of single-page or mobile application';
+export const REACT_INFO = 'React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript ' +
+    'library for building user interfaces based on UI components. It is maintained by Meta (formerly Facebook) and a ' +
+    'community of individual developers and companies. React can be used as a base in the development of ' +
+    'single-page, mobile, or server-rendered applications with frameworks like Next.js. However, React is only concerned' +
+    ' with state management and rendering that state to the DOM, so creating React applications usually requires the use' +
+    ' of additional libraries for routing, as well as certain client-side functionality';
 
 export const ADOBE_XD_INFO = 'Adobe XD is a vector-based user experience design tool for web apps and mobile apps, ' +
-    'developed and published by Adobe Inc. It is available for macOS and Windows, although there are versions for ' +
-    'iOS and Android to help preview the result of work directly on mobile devices.';
+    'developed and published by Adobe Inc. Adobe XD helps you craft prototypes that look and feel like the real thing,' +
+    ' so you can communicate your design vision and maintain alignment across your team efficiently.';
 
-export const ANGULAR_INFO = 'Angular is a TypeScript-based free and open-source web application framework led by the ' +
-    'Angular Team at Google and by a community of individuals and corporations. ' +
-    'Angular is a complete rewrite from the same team that built AngularJS.';
+export const ANGULAR_INFO = 'Angular is a platform and framework for building single-page client applications using HTML' +
+    ' and TypeScript. It implements core and optional functionality as a set of ' +
+    'TypeScript libraries that you import into your applications. The architecture of an Angular application relies on ' +
+    'certain fundamental concepts. The basic building blocks of the Angular framework are Angular components that are ' +
+    'organized into NgModules. NgModules collect related code into functional sets; an Angular application is defined ' +
+    'by a set of NgModules.';
 
 export const SASS_INFO = 'Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style ' +
     'Sheets. SassScript is the scripting language itself. Sass consists of two syntaxes. The original syntax, ' +
@@ -75,31 +81,41 @@ export const SPRING_INFO = 'The Spring Framework is an application framework and
     'Java platform. The framework\'s core features can be used by any Java application, but there are extensions ' +
     'for building web applications on top of the Java EE platform.';
 
-export const PYTHON_INFO = 'Python is a high-level, interpreted, general-purpose programming language. Its design' +
-    ' philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and' +
-    ' garbage-collected.';
+export const PYTHON_INFO = 'Python is a high-level, interpreted, general-purpose programming language. Its design ' +
+    'philosophy emphasizes code readability with the use of significant indentation.' +
+    'It is dynamically-typed and garbage-collected. It supports multiple programming paradigms,' +
+    ' including structured (particularly procedural), object-oriented and functional programming.' +
+    ' It is often described as a "batteries included" language due to its comprehensive standard library.';
 
 export const IAAS_INFO = 'Infrastructure as a service (IaaS) is a type of cloud computing service that offers' +
     ' essential compute, storage, and networking resources on demand, on a pay-as-you-go basis. IaaS is one of the four' +
     ' types of cloud services';
 
-export const FIREBASE_INFO = 'Google Firebase is a Google-backed application development software that enables developers to develop iOS, Android' +
-    ' and Web apps. Firebase provides tools for tracking analytics, reporting and fixing app crashes, creating marketing and product experiment.';
+export const FIREBASE_INFO = 'Google Firebase is a Backend-as-a-Service (Baas). It provides developers with a variety of' +
+    ' tools and services to help them develop quality apps, grow their user base, and earn profit. It is built on ' +
+    'Google’s infrastructure. Firebase is categorized as a NoSQL database program, which stores data in JSON-like documents.';
 
-export const MYSQL_INFO = 'MySQL is free and open-source software under the terms of the GNU General Public License, and ' +
-    'is also available under a variety of proprietary licenses. MySQL was owned and sponsored by the Swedish company' +
-    ' MySQL AB, which was bought by Sun Microsystems (now Oracle Corporation).';
+export const MYSQL_INFO = 'MySQL is an open-source relational database management system (RDBMS).  Its name is a ' +
+    'combination of "My", the name of co-founder Michael Widenius\'s daughter,and "SQL", the abbreviation for ' +
+    'Structured Query Language. A relational database organizes data into one or more data tables in which data may be ' +
+    'related to each other; these relations help structure the data. SQL is a language programmers use to create, modify' +
+    ' and extract data from the relational database, as well as control user access to the database.';
 
-export const JIRA_INFO = 'Jira is a proprietary issue tracking product developed by Atlassian that allows bug tracking ' +
-    'and agile project management. ';
+export const JIRA_INFO = 'Jira is a software application used for issue tracking and project management. The tool, ' +
+    'developed by the Australian software company Atlassian, has become widely used by agile development teams to track ' +
+    'bugs, stories, epics, and other tasks. As it grew in popularity and as the agile development methodology became more ' +
+    'widely used by software companies, Atlassian expanded the Jira platform to offer services to different teams. Today,' +
+    ' it provides several internal products.';
 
-export const VCS_INFO = 'Version control (also known as revision control, source control, or source code management) is' +
-    ' a class of systems responsible for managing changes to computer programs, documents, large web sites, or other' +
-    ' collections of information.';
+export const VCS_INFO = 'Version control, also known as source control, is the practice of tracking and managing changes' +
+    ' to software code. Version control systems are software tools that help software teams manage changes to source ' +
+    'code over time. Version control software keeps track of every modification to the code in a special kind of database.' +
+    ' If a mistake is made, developers can turn back the clock and compare earlier versions of the code to help fix the ' +
+    'mistake while minimizing disruption to all team members.';
 
-export const MONGODB_INFO = 'Version control (also known as revision control, source control, or source code management) is' +
-    ' a class of systems responsible for managing changes to computer programs, documents, large web sites, or other' +
-    ' collections of information.';
+export const MONGODB_INFO = 'MongoDB is an open source NoSQL database management program. NoSQL is used as an alternative ' +
+    'to traditional relational databases. NoSQL databases are quite useful for working with large sets of distributed data. ' +
+    'MongoDB is a tool that can manage document-oriented information, store or retrieve information.';
 
 export const JENKINS_INFO = 'Jenkins is an open source automation server. It helps automate the parts of' +
     ' software development related to building, testing, and deploying, facilitating continuous integration and' +
@@ -158,8 +174,8 @@ const SPRING_CARD_ARGS: ICardArg = {
     tooltipText: "Spring"
 }
 
-const AXIOS_CARD_ARGS: ICardArg = {
-    info: SASS_INFO,
+const PYTHON_CARD_ARGS: ICardArg = {
+    info: PYTHON_INFO,
     image: pythonIMG,
     color: "#fff",
     tooltipColor: 'rgba(43,0,250,.5)',
@@ -244,7 +260,7 @@ export const UI_CARDS: ICardArg[] = [
 export const REST_CARDS: ICardArg[] = [
   POSTMAN_CARD_ARGS,
   SPRING_CARD_ARGS,
-  AXIOS_CARD_ARGS
+  PYTHON_CARD_ARGS
 ];
 
 export const CLOUD_CARDS: ICardArg[] = [
