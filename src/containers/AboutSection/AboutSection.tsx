@@ -124,7 +124,6 @@ const AboutSection = () => {
                                     scraping portion of their competitive intelligence pipeline.
                                 </p>
                             </div>
-                            <img src={testImage} alt="test" />
                         </div>
                     </li>
                     <li>
@@ -141,7 +140,6 @@ const AboutSection = () => {
                                 In all of these roles, I contributed to their satellite imagery and space infrastructure acquisition technologies.
                             </p>
                         </div>
-                            <img src={testImage2} alt="test" className='about-image'/>
                             {/*<div style={{backgroundColor: 'black'}} >*/}
                             {/*    <ImageFollow src={testImage2} alt="test"/>*/}
                             {/*</div>*/}
@@ -163,7 +161,7 @@ const AboutSection = () => {
                             </p>
                         </div>
                             <div style={{backgroundColor: 'black'}} >
-                                <ImageFollow src={testImage3} alt="test"/>
+                                {/*<ImageFollow src={testImage3} alt="test"/>*/}
                             </div>
                         </div>
                     </li>
@@ -180,9 +178,6 @@ const AboutSection = () => {
                                                                                                          target="_blank" className='anchor'>Java SE 8 Programmer Certification</a> from Oracle
                                     shortly after graduation.
                                 </p>
-                                </div>
-                                <div style={{backgroundColor: 'black', width: '100%', display: 'flex', justifyContent: 'center'}} >
-                                    {true && <ImageFollow src={testImage4} alt="test"/>}
                                 </div>
                             </div>
                     </li>

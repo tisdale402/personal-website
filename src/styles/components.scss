@@ -377,6 +377,7 @@ make it thinner, then set it to again wrap around the entire parent element.
   //inset 0 0 1.3rem #bc13fe;
   //max-width: 20vw;
   display: flex;
+  flex-direction: column;
   height: 80%;
   //overflow: hidden;
 }

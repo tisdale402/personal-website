@@ -9,9 +9,13 @@ import paintBrushImg from '../../img/paintbrush.svg';
 //@ts-ignore
 import cloudImg from '../../img/cloud-service.svg'
 //@ts-ignore
-import serverImg from '../../img/server.svg';
+import serverImg from '../../img/server.png';
 //@ts-ignore
 import databaseImg from '../../img/database.svg';
+//@ts-ignore
+import pythonSVG from '../../img/icons8-python-50.svg';
+//@ts-ignore
+import springSVG from '../../svg/SpringSVG.tsx';
 //@ts-ignore
 import devopsImg from '../../img/testing.svg';
 import {Section} from 'react-scroll-section';
@@ -63,11 +67,30 @@ const SkillsSection = () => {
                         {/*<div className="card">*/}
                         {/*    Magic Card*/}
                         {/*</div>*/}
-                        <div className='about-panel' style={{display: 'flex', height: '17%', width: '30vw', flexDirection: 'column', justifyContent: 'space-evenly', borderRadius: '10px', position: 'sticky', top: '5rem'}}>
-                            <div style={{display: 'flex', justifyContent: 'center'}}>
-                                <img src={databaseImg} alt="test" className='skills-card-image'/>
+                        <div className='about-panel' style={{display: 'flex', height: '17%', width: '30vw', flexDirection: 'column', borderRadius: '10px', position: 'sticky', top: '5rem'}}>
+                            <div style={{display: 'flex', alignItems: 'center', color: '#009FFD', fontSize: '10px'}}>
+                                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center',
+                                     fontSize: '20px', width: '100%', borderRight: 'solid white 0.5px', height: '100%', justifyContent: 'center'}}>
+                                    Python
+                                    {/*{springSVG()}*/}
+                                    <img src={pythonSVG} alt="test" style={{margin: '1rem 0', height: '7rem', maxWidth: '8rem', fontSize: '12px'}}/>
+                                    <div style={{fontSize: '15px'}}>Exp: 3 Years</div>
+                                </div>
+                                <div style={{fontSize: '12px', maxWidth: '100%', marginLeft: '.5rem'}}>
+                                    {currentCard}
+                                </div>
                             </div>
-                            {currentCard}
+                            <div style={{ borderTop: 'solid white 0.5px', padding: '1rem 0 0 1rem'}}>
+                                Related Technologies
+                                <div style={{display: 'flex', flexDirection: 'row', listStyle: '-moz-initial'}}>
+                                    <div>
+                                        Tech1
+                                    </div>
+                                    <div>
+                                        Tech2
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     </div>
