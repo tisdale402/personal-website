@@ -8,13 +8,13 @@ import styled, {keyframes} from "styled-components";
 //@ts-ignore
 import Quote from "../../components/quote/quote.tsx";
 //@ts-ignore
-import testImage from "../../img/data-mining.png"
+import testImage from "../../img/data700x350.png"
 //@ts-ignore
-import testImage2 from "../../img/AdobeStock_173668395.jpeg"
+import testImage2 from "../../img/satellite400x600.png"
 //@ts-ignore
 import testImage3 from "../../img/perficient-background.jpeg"
 //@ts-ignore
-import testImage4 from "../../img/AdobeStock_344967114.jpeg"
+import testImage4 from "../../img/LSU400x600.png"
 import {Section} from 'react-scroll-section';
 import ImageFollow from "react-image-follow";
 
@@ -48,7 +48,7 @@ const AboutSection = () => {
                                     scraping portion of their competitive intelligence pipeline.
                                 </p>
                             </div>
-                            <img src={testImage} alt="test" />
+                            <img src={testImage} style={{maxWidth: '50rem', maxHeight: '70rem', borderRadius: '85px'}} alt="test" />
                         </div>
                     </li>
                     <li>
@@ -61,10 +61,10 @@ const AboutSection = () => {
                                     <a href ='https://www.maxar.com/' className='anchor' target="_blank">Maxar</a> is a space technology company
                                     that provides its services to both private clients and government agencies. In my position as a technical consultant at Perficient,
                                     I served in many roles for Maxar including frontend, backend, and fullstack developer.
-                                    In all of these roles, I contributed to their satellite imagery and space infrastructure acquisition technologies.
+                                    In all of these roles, I contributed to their satellite imagery and space infrastructure acquisition applications.
                                 </p>
                             </div>
-                            <img src={testImage2} alt="test"/>
+                            <img src={testImage2} style={{maxWidth: '45rem', maxHeight: '45rem', borderRadius: '85px'}} alt="test"/>
                         </div>
                     </li>
                     <li>
@@ -82,7 +82,7 @@ const AboutSection = () => {
                                                 className='anchor'>Certified Cloud Practitioner</a> certification from AWS and the Scrum Fundamentals certification from the Scrum Alliance during my tenure.
                             </p>
                         </div>
-                            <img src={testImage3} alt="test"/>
+                            <img src={testImage3} style={{maxWidth: '40rem', maxHeight: '40rem', borderRadius: '85px'}} alt="test"/>
                         </div>
                     </li>
                     <li>
@@ -92,14 +92,14 @@ const AboutSection = () => {
                                 <h3>Louisiana State University</h3>
                                 <h2>Baton Rouge, Louisiana</h2>
                                 <p>
-                                    Received Bachelor of Science recognition, majoring in Computer Science concentrated
+                                    After watching LSU quarterback Joe Burrow add a new chapter to the Bible, I received Bachelor of Science recognition, majoring in Computer Science concentrated
                                     in Software Engineering. LSU's computer science program focused on backend application
                                     principles and patterns which provided the groundwork for attaining the <a href ='https://www.credly.com/badges/42c4c569-0e50-4b17-9523-0ca3850e264a?source=linked_in_profile'
                                                                                                          target="_blank" className='anchor'>Java SE 8 Programmer Certification</a> from Oracle
                                     shortly after graduation.
                                 </p>
                                 </div>
-                            <img src={testImage4} alt="test"/>
+                            <img style={{maxWidth: '45rem', maxHeight: '45rem', borderRadius: '85px'}} src={testImage4} alt="test"/>
                         </div>
                     </li>
                 </ul>
@@ -172,7 +172,7 @@ const AboutSection = () => {
                                 <h3>Louisiana State University</h3>
                                 <h2>Baton Rouge, Louisiana</h2>
                                 <p>
-                                    Received Bachelor of Science recognition, majoring in Computer Science concentrated
+                                    I received Bachelor of Science recognition, majoring in Computer Science concentrated
                                     in Software Engineering. LSU's computer science program focused on backend application
                                     principles and patterns which provided the groundwork for attaining the <a href ='https://www.credly.com/badges/42c4c569-0e50-4b17-9523-0ca3850e264a?source=linked_in_profile'
                                                                                                          target="_blank" className='anchor'>Java SE 8 Programmer Certification</a> from Oracle

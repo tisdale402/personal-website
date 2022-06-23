@@ -40,7 +40,7 @@ const SkillsCard = ({info, image, color, tooltipColor, tooltipText, isRowActive,
 
     return (
         <div className='skills-card'>
-            <div className='skills-shadow' onClick={()=> {setCard(info);}}>
+            <div className='skills-shadow' onMouseEnter={()=> {setCard(info);}}>
                 <BlueOnGreenTooltip title={tooltipText} cardImage={image}/>
             </div>
     </div>
