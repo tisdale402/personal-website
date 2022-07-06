@@ -55,7 +55,7 @@ const SkillsRow = ({title, cardArgs, direction, titleColor, setCard, imagePath}:
 
                 return (
                     // @ts-ignore
-                        <SkillsCard isRowActive={isActive} setCard={setCard} key={card.title} info={card.info} color={card.color} tooltipText={card.tooltipText} tooltipColor={card.tooltipColor} image={card.image}/>
+                        <SkillsCard card={card} isRowActive={isActive} setCard={setCard} key={card.title} info={card.info} color={card.color} tooltipText={card.tooltipText} tooltipColor={card.tooltipColor} image={card.image}/>
                 )
             })}
             </div>

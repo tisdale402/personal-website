@@ -14,6 +14,7 @@ interface ISkillsCard {
     tooltipText: string;
     isRowActive: boolean;
     setCard: (string) => void;
+    card: any;
 }
 
 // @ts-ignore
@@ -21,12 +22,18 @@ interface ITooltip {
     title: string;
     className?: any;
     cardImage: any;
+    setCard: any;
+    info: any;
+    card: any;
 }
-const BlueOnGreenTooltip = styled(({ title, className, cardImage}: ITooltip) => (
+const BlueOnGreenTooltip = styled(({ title, className, cardImage, setCard, info, card}: ITooltip) => (
     <div style={{marginBottom: '.8rem', fontSize: '2rem'}}>
-    <Tooltip placement={'left'} title={title}  componentsProps={{ tooltip: { className: className } }}>
-        <img src={cardImage} alt="test" className='skills-card-image'/>
-    </Tooltip>
+
+        <Tooltip placement={'left'} title={title}  componentsProps={{ tooltip: { className: className } }}>
+            <div className='skills-shadow' onMouseEnter={()=> {setCard(card);}}>
+                <img src={cardImage} alt="test" className='skills-card-image'/>
+            </div>
+        </Tooltip>
     </div>
 ))(`
     color: lightblue;
@@ -35,15 +42,13 @@ const BlueOnGreenTooltip = styled(({ title, className, cardImage}: ITooltip) => 
 `);
 
 
-const SkillsCard = ({info, image, color, tooltipColor, tooltipText, isRowActive, setCard}: ISkillsCard) => {
+const SkillsCard = ({info, image, color, tooltipColor, tooltipText, isRowActive, setCard, card}: ISkillsCard) => {
 
 
     return (
         <div className='skills-card'>
-            <div className='skills-shadow' onMouseEnter={()=> {setCard(info);}}>
-                <BlueOnGreenTooltip title={tooltipText} cardImage={image}/>
-            </div>
-    </div>
+                <BlueOnGreenTooltip title={tooltipText} cardImage={image} card={card} setCard={setCard} info={info}/>
+        </div>
     );
 }
 

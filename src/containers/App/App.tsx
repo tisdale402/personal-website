@@ -58,7 +58,7 @@ const App = () => {
 
     return (
             <StyledBackground>
-                {/*<MediaQuery minWidth={1024}>*/}
+                <MediaQuery minWidth={1024}>
                 <ScrollingProvider>
                     <StaticMenu/>
                     <MainName/>
@@ -67,12 +67,12 @@ const App = () => {
                     <ProjectSection/>
                     <Footer/>
                 </ScrollingProvider>
-                {/*</MediaQuery>*/}
-                {/*<MediaQuery maxWidth={1023} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>*/}
-                {/*    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center',color: 'red'}}>*/}
-                {/*    BLOCKED FOR MOBILE DEVICES*/}
-                {/*    </div>*/}
-                {/*</MediaQuery>*/}
+                </MediaQuery>
+                <MediaQuery maxWidth={1023} style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center',color: 'red'}}>
+                    BLOCKED FOR MOBILE DEVICES UNTIL RESPONSIVE RELEASE
+                    </div>
+                </MediaQuery>
             </StyledBackground>
     );
 };

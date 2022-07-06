@@ -23,7 +23,7 @@ const Quote = ({width, quote, steps, time}: IQuote) => {
 }`
 
     const blinkCaret = keyframes`from, to {border-color: transparent}
-  50% { border-color: #06D6A0}`
+  50% { border-color: #009FFD}`
     const StyledQuote = styled.div`overflow: hidden;
                              border-right: .15em solid white;
                              white-space: nowrap;

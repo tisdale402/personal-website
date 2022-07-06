@@ -17,7 +17,6 @@ import testImage3 from "../../img/perficient-background.jpeg"
 import testImage4 from "../../img/LSU400x600.png"
 import {Section} from 'react-scroll-section';
 import ImageFollow from "react-image-follow";
-
 import PulseLine from "../../utilities/pulseLine/pulseLine";
 import MediaQuery from "react-responsive";
 
@@ -25,10 +24,13 @@ const AboutSection = () => {
     const [isActive, setActive] = useState(false);
     return (
         <Section id={'about'}>
-        <section style={{margin: '5vh 5vw 0 5vw',}}>
-            <h1>
-                Experience
-            </h1>
+        <section style={{margin: '5vh 5vw 10vh 5vw'}}>
+            <div style={{width: '12vw', paddingTop: '10vh'}}>
+                <Quote width={'100%'} time={'.8'} steps={'20'} quote={'Experience'}/>
+            </div>
+            {/*<h1>*/}
+            {/*    Experience*/}
+            {/*</h1>*/}
             <MediaQuery minWidth={1024}>
             <div className="timeline">
                 <ul>
@@ -67,6 +69,11 @@ const AboutSection = () => {
                             <img src={testImage2} style={{maxWidth: '45rem', maxHeight: '45rem', borderRadius: '85px'}} alt="test"/>
                         </div>
                     </li>
+                    {/*<div className="bubble"></div>*/}
+                    {/*<div className="bubble"></div>*/}
+                    {/*<div className="bubble"></div>*/}
+                    {/*<div className="bubble"></div>*/}
+                    {/*<div className="bubble"></div>*/}
                     <li>
                         <span>February 2021 - May 2022</span>
                         <div className="content" style={{display: "flex", flexDirection: "row", justifyContent: 'space-between'}}>

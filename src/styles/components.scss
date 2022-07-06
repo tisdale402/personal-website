@@ -29,7 +29,7 @@ $bg-color: #4242e6;
   //        //0 0 151px var(--violets-are-blue);
   //margin: 5rem 10rem 5rem 4rem;
   //height: 90vh;
-  margin-bottom: 25vh;
+  margin-bottom: 40vh;
   //font-size: 250rem;
   letter-spacing: 5px;
 
@@ -477,36 +477,44 @@ make it thinner, then set it to again wrap around the entire parent element.
 .skills-card-image {
   height: 7rem;
   max-width: 8rem;
-  opacity: 25%;
-
-  &:hover {
-    opacity: 100%;
-    cursor: pointer;
-    animation: fadeInCompCard .3s ease-out;
-  }
+  //opacity: 25%;
+  //
+  //&:hover {
+  //  opacity: 100%;
+  //  cursor: pointer;
+  //  animation: fadeInCompCard .3s ease-out;
+  //}
 }
 
 .skills-shadow {
   position: relative;
   text-align: center;
   margin: 0 3rem;
+  opacity: 25%;
   &:before {
     content: '';
     position: absolute;
     background: black;
     //${isRowActive ? 'white' : 'black'};
-    top: 120%;
+    top: 135%;
     left: 0;
     width: 100%;
     height: 12.5%;
     opacity: 75%;
 
     transform: perspective(50em) rotateX(40deg) translateZ(2em);
-    filter: blur(1.5em);
+    filter: blur(.6em);
   };
 
   &:hover::before {
     background: white;
+    opacity: 1;
+    animation: fadeInComp .3s ease-out;
+  }
+
+  &:hover {
+    //background: white;
+    opacity: 1;
     animation: fadeInComp .3s ease-out;
   }
 }
@@ -520,6 +528,88 @@ make it thinner, then set it to again wrap around the entire parent element.
   pointer-events: auto;
   opacity: 1;
   transition: all 300ms ease-in-out;
+}
+
+$bubble-count: 50;
+$sway-type: "sway-left-to-right", "sway-right-to-left";
+
+@function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+}
+
+@function sample($list) {
+  @return nth($list, random(length($list)));
+}
+
+.bubbles {
+  position: relative;
+  //width: 100%;
+}
+
+.bubble {
+  position: absolute;
+  left: var(--bubble-left-offset);
+  bottom: -75%;
+  display: block;
+  width: var(--bubble-radius);
+  height: var(--bubble-radius);
+  border-radius: 50%;
+  z-index: 99;
+  border: 4px solid rgba(6, 214, 160, 1);
+  animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: hsla(183, 94%, 76%, 0.3);
+    border-radius: inherit;
+    border: inherit;
+    animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
+  }
+
+  @for $i from 0 through $bubble-count {
+    &:nth-child(#{$i}) {
+      --bubble-left-offset: #{random_range(0vw, 100vw)};
+      --bubble-radius: #{random_range(1vw, 10vw)};
+      --bubble-float-duration: #{random_range(6s, 12s)};
+      --bubble-sway-duration: #{random_range(4s, 6s)};
+      --bubble-float-delay: #{random_range(0s, 4s)};
+      --bubble-sway-delay: #{random_range(0s, 4s)};
+      --bubble-sway-type: #{sample($sway-type)};
+    }
+  }
+}
+
+@keyframes float-up {
+  to {
+    transform: translateY(-175vh);
+  }
+}
+
+@keyframes sway-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sway-right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .modal {
@@ -943,10 +1033,10 @@ make it thinner, then set it to again wrap around the entire parent element.
 
 @keyframes fadeInComp {
   from {
-    opacity: 0%;
+    opacity: 25%;
   }
   to {
-    opacity: 75%;
+    opacity: 100%;
   }
 }
 

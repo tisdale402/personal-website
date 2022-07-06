@@ -35,7 +35,7 @@ import ReactSVG from '../../svg/ReactSVG.tsx';
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // Skills Rows Titles
 export const UI_ROW_TITLE = 'UI/UX';
-export const SERVER_ROW_TITLE = 'Server-Side';
+export const SERVER_ROW_TITLE = 'Serverside';
 export const CLOUD_SOLUTIONS_ROW_TITLE = 'Cloud Solutions';
 export const DBMS_ROW_TITLE = 'DBMS';
 export const PROJECT_MANAGEMENT_ROW_TITLE = 'Project Management';
@@ -52,9 +52,8 @@ export const SKILLS_ROWS_TITLES: string[] = [
 export const PLACEHOLDER_INFO = 'Click an icon to learn more...';
 
 export const REACT_INFO = 'React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript ' +
-    'library for building user interfaces based on UI components. It is maintained by Meta (formerly Facebook) and a ' +
-    'community of individual developers and companies. React can be used as a base in the development of ' +
-    'single-page, mobile, or server-rendered applications with frameworks like Next.js. However, React is only concerned' +
+    'library for building user interfaces based on UI components. It is maintained by Meta and a ' +
+    'community of individual developers and companies. React is only concerned' +
     ' with state management and rendering that state to the DOM, so creating React applications usually requires the use' +
     ' of additional libraries for routing, as well as certain client-side functionality';
 
@@ -64,8 +63,7 @@ export const ADOBE_XD_INFO = 'Adobe XD is a vector-based user experience design 
 
 export const ANGULAR_INFO = 'Angular is a platform and framework for building single-page client applications using HTML' +
     ' and TypeScript. It implements core and optional functionality as a set of ' +
-    'TypeScript libraries that you import into your applications. The architecture of an Angular application relies on ' +
-    'certain fundamental concepts. The basic building blocks of the Angular framework are Angular components that are ' +
+    'TypeScript libraries that you import into your applications. The basic building blocks of the Angular framework are Angular components that are ' +
     'organized into NgModules. NgModules collect related code into functional sets; an Angular application is defined ' +
     'by a set of NgModules.';
 
@@ -131,6 +129,15 @@ interface ICardArg{
     tooltipColor: string;
     tooltipText: string;
 }
+
+export const DUMMY_CARD_ARGS: ICardArg = {
+    info: PLACEHOLDER_INFO,
+    image: ReactIMG,
+    color: "rgba(60, 174, 203, 1)",
+    tooltipColor: 'rgba(60, 174, 203, 1)',
+    tooltipText: "React"
+}
+
 const REACT_CARD_ARGS: ICardArg = {
     info: REACT_INFO,
     image: ReactIMG,

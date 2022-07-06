@@ -9,7 +9,7 @@ import paintBrushImg from '../../img/paintbrush.svg';
 //@ts-ignore
 import cloudImg from '../../img/cloud-service.svg'
 //@ts-ignore
-import serverImg from '../../img/server.png';
+import serverImg from '../../img/server.svg';
 //@ts-ignore
 import databaseImg from '../../img/database.svg';
 //@ts-ignore
@@ -25,12 +25,12 @@ import Quote from "../../components/quote/quote.tsx";
 
 const SkillsSection = () => {
 
-    const [currentCard, setCurrentCard] = useState(SkillRowConstants.PLACEHOLDER_INFO);
+    const [currentCard, setCurrentCard] = useState(SkillRowConstants.DUMMY_CARD_ARGS);
 
     return (
              <Section id={'skills'}>
-                 <div style={{margin: '10vh 5vw 10vh 5vw'}}>
-                     Skills
+                 <div style={{width: '12vw', paddingTop: '10vh'}}>
+                     {/*<Quote width={'100%'} time={'.8'} steps={'20'} quote={'Experience'}/>*/}
                  </div>
                  <div className='skills-section'>
                         <div style={{display: 'flex', flexDirection: 'column', marginRight: '3vw'}}>
@@ -63,24 +63,24 @@ const SkillsSection = () => {
                                        imagePath={devopsImg}
                                        setCard={setCurrentCard}/>
                         </div>
-                    <div>
                         {/*<div className="card">*/}
                         {/*    Magic Card*/}
                         {/*</div>*/}
                         <div className='about-panel' style={{display: 'flex', height: '17%', width: '30vw', flexDirection: 'column', borderRadius: '10px', position: 'sticky', top: '5rem'}}>
-                            <div style={{display: 'flex', alignItems: 'center', color: '#009FFD', fontSize: '10px'}}>
+                            <div style={{display: 'flex', alignItems: 'center', color: '#009ffd', fontSize: '10px'}}>
                                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center',
                                      fontSize: '20px', width: '100%', borderRight: 'solid white 0.5px', height: '100%', justifyContent: 'center'}}>
-                                    Python
+                                    {currentCard.tooltipText}
+                                    {/*{currentCard.image}*/}
                                     {/*{springSVG()}*/}
-                                    <img src={pythonSVG} alt="test" style={{margin: '1rem 0', height: '7rem', maxWidth: '8rem', fontSize: '12px'}}/>
+                                    <img src={currentCard.image} alt="test" style={{margin: '1rem 0', height: '7rem', maxWidth: '8rem', fontSize: '12px'}}/>
                                     <div style={{fontSize: '15px'}}>Exp: 3 Years</div>
                                 </div>
-                                <div style={{fontSize: '12px', maxWidth: '100%', marginLeft: '.5rem'}}>
-                                    {currentCard}
+                                <div style={{fontSize: '12px', maxWidth: '40rem', maxHeight: '14rem', marginLeft: '.5rem'}}>
+                                    {currentCard.info}
                                 </div>
                             </div>
-                            <div style={{ borderTop: 'solid white 0.5px', padding: '1rem 0 0 1rem'}}>
+                            <div style={{ borderTop: 'solid white 0.5px', padding: '1rem 0 0 1rem', color: 'rgba(6, 214, 160, 1)'}}>
                                 Related Technologies
                                 <div style={{display: 'flex', flexDirection: 'row', listStyle: '-moz-initial'}}>
                                     <div>
@@ -92,7 +92,6 @@ const SkillsSection = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </div>
              </Section>
             );
